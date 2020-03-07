@@ -21,6 +21,15 @@ class App{
             $method = $url[2];
         }
 
+
+        //контроль аутентификации
+        if (!in_array($method, array('login', 'register', 'signoutFromAcc', 'checkUser', 'createUser'))) {
+            if(!$_SESSION['user']) {
+                $controller = 'UserController';
+                $method = 'login';
+            }
+        }
+
         if (file_exists('app/controller/'.$controller.'.php')){
             include ('app/controller/'.$controller.'.php');
             $controller = 'Controller\\'.$controller;
