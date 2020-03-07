@@ -3,7 +3,7 @@ namespace controller;
 
 use model\User;
 
-class UserController extends ControllerBase {
+class UserController extends Controller {
     public function __construct(){
         parent::__construct();
     }

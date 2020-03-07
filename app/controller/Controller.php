@@ -3,8 +3,8 @@ namespace controller;
 
 use model\Data;
 use view\View;
-
-class ControllerBase{
+//перевроверить в работе
+class Controller{
     protected $model;
     protected $view;
 
