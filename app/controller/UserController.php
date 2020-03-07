@@ -2,6 +2,7 @@
 namespace controller;
 
 use model\User;
+//--
 
 class UserController extends Controller {
     public function __construct(){
